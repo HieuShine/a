@@ -1,0 +1,65 @@
+﻿<Window x:Class="_9_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_9_3"
+        mc:Ignorable="d"
+        Title="Cập nhật thành viên" Height="500" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition Height="180"></RowDefinition>
+            <RowDefinition Height="30px"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Họ tên" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"></Label>
+            <TextBox Width="200px" Height="30px" Margin="15,0,0,0" Name="txtName"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Label Content="Giới tính" ></Label>
+            <WrapPanel Orientation="Vertical" Name="radGender">
+                <RadioButton Content="Nam" ></RadioButton>
+            <RadioButton Content="Nữ" ></RadioButton>
+            </WrapPanel>
+            
+
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <Label Content="Sở thích"></Label>
+            <WrapPanel Orientation="Vertical" Name="cbEnjoy">
+                <CheckBox Content="Đá bóng" Margin="5,8,0,0"></CheckBox>
+                <CheckBox Content="Liên quân " Margin="5,8,0,0"></CheckBox>
+                <CheckBox Content="Liên minh huyền thoại" Margin="5,8,0,0"></CheckBox>
+                <CheckBox Content="Đánh cầu" Margin="5,8,0,0"></CheckBox>
+                <CheckBox Content="Bơi lội" Margin="5,8,0,0"></CheckBox>
+                <CheckBox Content="Xem phim" Margin="5,8,0,0"></CheckBox>
+
+                
+            </WrapPanel>
+
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="0">
+            <Label Content="Tình trạng hôn nhân"></Label>
+            <WrapPanel Orientation="Horizontal" Name="radGetMarried">
+                <RadioButton Content="Chưa kết hôn" Margin="10,5,5,0"></RadioButton>
+                <RadioButton Content="Đã kết hôn" Margin="20,5,0,0"></RadioButton>
+            </WrapPanel>
+            <Button Content="Thêm" Margin="50,20,50,0" Width="60px" HorizontalAlignment="Left" Click="Button_Click"></Button>
+        </StackPanel>
+        <GroupBox Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Header="Thông tin thành viên">
+            <ListBox Name="lbItem">
+            
+        </ListBox>
+            
+        </GroupBox>
+        <Button Content="Thoát" Grid.Column="1" Grid.Row="3" Height="30px" Width="70px" HorizontalAlignment="Right" Margin="0,0,20,0" Click="Button_Click_1"></Button>
+        
+    </Grid>
+</Window>
